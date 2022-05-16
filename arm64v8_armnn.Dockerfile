@@ -1,5 +1,5 @@
 FROM arm64v8/ubuntu:bionic
-COPY qemu-aarch64-static /usr/bin/qemu-aarch64-static
+COPY ./bin/qemu-aarch64-static /usr/bin/qemu-aarch64-static
 
 # Basic apt update
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends locales ca-certificates &&  rm -rf /var/lib/apt/lists/*
